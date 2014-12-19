@@ -1,0 +1,6 @@
+set init
+set logfile /var/log/monit.log
+
+check process mysqld with pidfile /var/run/mysqld/mysqld.pid
+  start program = "/usr/sbin/service mysql start"
+  stop program = "/usr/sbin/service mysql stop"

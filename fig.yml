@@ -1,0 +1,22 @@
+mysql:
+  image: ptqa/mysql4jenkins
+  volumes:
+    - mysql/mysql-db:/var/lib/mysql 
+    - mysql/mysql-conf:/etc/mysql/:ro
+    - mysql/mysql-logs:/var/log/
+    - /tmp/mysqltmp/:/var/mysqltmp
+redis:
+  image: ptqa/redis4jenkins
+memcached:
+  image: ptqa/memcached4jenkins
+riak:
+  image: ptqa/riak4jenkins
+node:
+  image: ptqa/node4jenkins
+  ports:
+    - "2233:22"
+  links:
+    - mysql
+    - redis
+    - memcached
+    - riak
