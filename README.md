@@ -1,4 +1,5 @@
-# Docker containers to run jenkins slave and link it with redis, memcached, riak and mysql.
+# Info 
+Docker containers to run jenkins slave and link it with redis, memcached, riak and mysql.
 
 # Usage:
 1. git clone <this repo> <dir>
