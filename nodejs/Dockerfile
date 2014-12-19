@@ -3,7 +3,7 @@ MAINTAINER ptqa
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update && apt-get -y install wget libzmq3-dev curl npm ssh && \
+RUN apt-get update && apt-get -y install wget libzmq3-dev curl npm ssh openjdk-7-jre && \
     npm install -g chai sinon mocha proxyquire istanbul && \
     apt-get clean
 
